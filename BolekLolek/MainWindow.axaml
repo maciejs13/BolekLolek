@@ -33,10 +33,16 @@
                         <CheckBox Content="Z udziałem innych kolegów"/>
                 </StackPanel>
                 
-                <ListBox>
-                        <ListBoxItem></ListBoxItem>
-                        <ListBoxItem></ListBoxItem>
-                </ListBox>
+                <StackPanel>
+                        <ListBox>
+                        
+                        </ListBox>
+                </StackPanel>
+                
+                <StackPanel HorizontalAlignment="Center" Margin="40">
+                        <Calendar></Calendar>
+                </StackPanel>
+                
         </StackPanel>
         
         
