@@ -71,3 +71,4 @@
 /home/maciejs/RiderProjects/BolekLolek/BolekLolek/obj/Debug/net9.0/BolekLolek.pdb
 /home/maciejs/RiderProjects/BolekLolek/BolekLolek/obj/Debug/net9.0/BolekLolek.genruntimeconfig.cache
 /home/maciejs/RiderProjects/BolekLolek/BolekLolek/obj/Debug/net9.0/ref/BolekLolek.dll
+/home/maciejs/RiderProjects/BolekLolek/BolekLolek/obj/Debug/net9.0/BolekLolek.sourcelink.json

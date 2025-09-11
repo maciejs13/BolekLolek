@@ -19,4 +19,11 @@
             <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
         </PackageReference>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Bolek.png" />
+      <AvaloniaResource Include="Assets\Bolek.png" />
+      <None Remove="Assets\Lolek.jpeg" />
+      <AvaloniaResource Include="Assets\Lolek.jpeg" />
+    </ItemGroup>
 </Project>
