@@ -1,57 +1,61 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="BolekLolek.MainWindow"
-        Title="BolekLolek"
+        Title="Bolek i Lolek - Zadania"
+        Width="800" Height="600"
         Background="OliveDrab"
         FontStyle="Italic">
-        
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                <StackPanel>
-                        
-                        <TextBlock Text="Lista Zadań Bolka i Lolka" HorizontalAlignment="Center" FontSize="30" Margin="10"/>
-                        
-                        <TextBox x:Name="Zadanie" Width="200" Height="30" Watermark="Wpisz nazwę zadania..." Margin="10" />      
-                        <Button Click="Button_OnClick" Width="100" Height="30" Content="Dodaj" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" Margin="10"/>
-                        
-                        <StackPanel >
-                                <ComboBox Name="ComboBox" Width="200" Height="30"  HorizontalAlignment="Center" SelectionChanged="SelectingItemsControl_OnSelectionChanged">
-                                        <ComboBoxItem Content="Bolek"/>
-                                        <ComboBoxItem Content="Lolek" />
-                                </ComboBox>
-                                <Border BorderThickness="2" BorderBrush="Black" Width="250" Margin="12">
-                                        <Image Name="Image" Width="200" Height="200" Source="" />
-                                </Border> 
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="10">
+
+            <TextBlock Text="Lista Zadań Bolka i Lolka" 
+                       HorizontalAlignment="Center" FontSize="30" Margin="10"/>
+
+            <TextBox x:Name="Zadanie" Width="300" Height="30" 
+                     Watermark="Wpisz nazwę zadania..." Margin="10" />      
+
+            <ComboBox Name="ComboBox" Width="200" Height="30"  
+                      HorizontalAlignment="Center" Margin="10"
+                      SelectionChanged="SelectingItemsControl_OnSelectionChanged">
+                <ComboBoxItem Content="Bolek"/>
+                <ComboBoxItem Content="Lolek" />
+            </ComboBox>
+
+            <Border BorderThickness="2" BorderBrush="Black" Width="250" Margin="12" Background="White">
+                <Image Name="Image" Width="200" Height="200" Source="" />
+            </Border> 
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <RadioButton x:Name="RadioNiski" Content="niski" GroupName="priorytet" Margin="5"/>
+                <RadioButton x:Name="RadioNormalny" Content="normalny" GroupName="priorytet" Margin="5"/>
+                <RadioButton x:Name="RadioWysoki" Content="wysoki" GroupName="priorytet" Margin="5"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <CheckBox x:Name="CheckDworz" Content="Na dworze" Margin="5"/>
+                <CheckBox x:Name="CheckSprzet" Content="Potrzebny sprzęt" Margin="5"/>
+                <CheckBox x:Name="CheckKolegow" Content="Z udziałem kolegów" Margin="5"/>
+            </StackPanel>
+
+            <Calendar x:Name="Calendar" Margin="10" HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button Click="Button_OnClick" Width="100" Height="30" Content="Dodaj" Margin="5"/>
+                <Button Click="SummaryButton_OnClick" Width="150" Height="30" Content="Podsumowanie dnia" Margin="5"/>
+            </StackPanel>
+
+            <ListBox Name="ListBox" Margin="10">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="5">
+                            <TextBlock Text="{Binding}" Width="500" TextWrapping="Wrap"/>
+                            <Button Content="Usuń" Click="DeleteTask_OnClick" Margin="10,0,0,0"/>
                         </StackPanel>
-                        <StackPanel HorizontalAlignment="Center">
-                                <RadioButton Content="niski" GroupName="piorytet"/>
-                                <RadioButton Content="normalny" GroupName="piorytet"/>
-                                <RadioButton Content="wysoki" GroupName="piorytet"/>
-                        </StackPanel>
-                        <StackPanel HorizontalAlignment="Center">
-                                <CheckBox Content="Na dworze"/>
-                                <CheckBox Content="Potrzebny sprzęt"/>
-                                <CheckBox Content="Z udziałem innych kolegów"/>
-                        </StackPanel>
-                        
-                        <StackPanel>
-                                <ListBox Name="ListBox">
-                                        <ListBox.Items>
-                                                <Label></Label>
-                                        </ListBox.Items>
-                                </ListBox>
-                        </StackPanel>
-                        
-                        <StackPanel HorizontalAlignment="Center" Margin="40">
-                                <Calendar></Calendar>
-                        </StackPanel>
-                        
-                </StackPanel>
-        
-        </ScrollViewer>
-        
-        
-        
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </StackPanel>
+    </ScrollViewer>
 </Window>

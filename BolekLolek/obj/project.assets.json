@@ -1416,25 +1416,31 @@
     ]
   },
   "packageFolders": {
-    "/home/maciejs/.nuget/packages/": {}
+    "C:\\Users\\macie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/maciejs/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj",
+      "projectUniqueName": "C:\\Users\\macie\\RiderProjects\\BolekLolek2\\BolekLolek\\BolekLolek.csproj",
       "projectName": "BolekLolek",
-      "projectPath": "/home/maciejs/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj",
-      "packagesPath": "/home/maciejs/.nuget/packages/",
-      "outputPath": "/home/maciejs/RiderProjects/BolekLolek/BolekLolek/obj/",
+      "projectPath": "C:\\Users\\macie\\RiderProjects\\BolekLolek2\\BolekLolek\\BolekLolek.csproj",
+      "packagesPath": "C:\\Users\\macie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\macie\\RiderProjects\\BolekLolek2\\BolekLolek\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/maciejs/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\macie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1451,7 +1457,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -1496,7 +1502,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\macie\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
